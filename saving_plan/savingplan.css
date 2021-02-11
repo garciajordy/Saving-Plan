@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+}
+.body {
+    background-color: rgb(127, 197, 255);
+    width: 100vw;
+    height: 100vh; 
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.inputCon {
+    width: 300px;
+    height: 200px;
+    background-color: honeydew;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    border-radius: 15px;
+    border: black 1px solid;
+    box-shadow:black 2px 1px 3px;
+    padding: 20px;
+    visibility: hidden;
+    z-index: 1;
+}
+.inputCon > input {
+    width: 90%;
+    margin: 10px 0px;
+    border-radius: 15px;
+}
+.x {
+    border: black 1px solid;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 16px;
+    text-align: center;
+    border-radius: 2px;
+    background-color: red;
+    color: white;
+}
+.x:hover {
+    transform: scale(1.1);
+}
+#button {
+    position: absolute;
+    top: 55px;
+    left: 55px;
+}
+.calender {
+    width: 90%;
+    margin: 50px 0 0 150px;
+    height: 80vh;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    
+
+}
+table {
+    margin-top: 100px;
+}
+
+table,th,td {
+    text-align: center;
+    margin: 10px 10px 0 10px;
+    border: black 1px solid;
+    border-collapse: collapse;
+    
+}
+.saving, .monthlySaving, .yearSaving {
+    width: 200px;
+    height: 150px;
+    background-color: rgb(245, 247, 150);
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    border-radius: 15px;
+    border: black solid 2px;
+    text-align: center;
+    line-height: 5px;
+}
+.yearSaving {
+    top: 400px;
+}
+.monthlySaving {
+    top: 223px;
+}
+table > input {
+    width: 100px;
+}
+.active {
+    background-color: yellow;
+}
+.dateCon {
+    position: absolute;
+    background-color: wheat;
+    border: black solid 2px;
+    border-radius: 15px;
+    top: 200px;
+    left: 30px;
+    padding: 0px 10px 0px 10px;
+}
+#nextweek {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+#nextmonth {
+    position: absolute;
+    right: 100px;
+    top: 10px;
+}
+.salaryCon {
+    position: absolute;
+    left: 20%;
+}
+#clear {
+    position: absolute;
+    left: 48vw;
+    bottom: 20px;
+}
