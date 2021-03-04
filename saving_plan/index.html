@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="savingplan.css">
+</head>
+
+<body>
+    <div class="body">
+        <button onclick="clearAll()" id="clear">clear local storage</button>
+        <div class="salaryCon">
+            <h3 id="textSalary"></h3>
+        </div>
+        <button ondblclick="nextmonth()" title="Double Click" id="nextmonth">next month</button>
+        <button onclick="nextweek()" id="nextweek">next week</button>
+        <button id="button" onclick="ShowSalaryDiv()">input salary</button>
+        <div id="inpCon" class="inputCon">
+            <div class="x" onclick="ShowSalaryDiv()"><label>X</label></div>
+
+            <label for="salary">Salary:</label><br>
+            <input id="inpsal" value="0" type="text"><br>
+            <label for="extra">Bills:</label><br>
+            <input id="inpbill" value="0" type="text">
+            <br><br>
+            <center>
+                <button onclick="ConfirmSalary()">confirm</button>
+            </center>
+
+        </div>
+        <div class="dateCon">
+            <center>
+                <h1 id="datetoday"></h1>
+                <h2 id="weektoday">week: 3</h2>
+            </center>
+        </div>
+        <div class="calender">
+            <table style="width: 98%;">
+                <tr>
+
+                    <th>index</th>
+                    <th id="monday">Monday</th>
+                    <th id="tuesday">Tuesday</th>
+                    <th id="wednesday">Wednesday</th>
+                    <th id="thursday">Thursday</th>
+                    <th id="friday">Friday</th>
+                    <th id="saturday">Saturday</th>
+                    <th id="sunday">Sunday</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>
+                        <p id="moto"></p>
+                    </th>
+                    <th>
+                        <p id="tuto"></p>
+                    </th>
+                    <th>
+                        <p id="weto"></p>
+                    </th>
+                    <th>
+                        <p id="thto"></p>
+                    </th>
+                    <th>
+                        <p id="frto"></p>
+                    </th>
+                    <th>
+                        <p id="sato"></p>
+                    </th>
+                    <th>
+                        <p id="suto"></p>
+                    </th>
+                </tr>
+                <tr>
+                    <th>food</th>
+                    <td><input value="0" oninput="mof2()" id="mof" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="tuf2()" id="tuf" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="wef2()" id="wef" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="thf2()" id="thf" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="frf2()" id="frf" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="saf2()" id="saf" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="suf2()" id="suf" style="width: 105px;" type="number"></td>
+
+                </tr>
+                <tr>
+                    <th>cigarettes</th>
+                    <td><input value="0" oninput="moc2()" id="moc" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="tuc2()" id="tuc" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="wec2()" id="wec" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="thc2()" id="thc" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="frc2()" id="frc" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="sac2()" id="sac" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="suc2()" id="suc" style="width: 105px;" type="number"></td>
+                </tr>
+                <tr>
+                    <th>activities</th>
+                    <td><input value="0" oninput="moa2()" id="moa" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="tua2()" id="tua" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="wea2()" id="wea" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="tha2()" id="tha" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="fra2()" id="fra" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="saa2()" id="saa" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="sua2()" id="sua" style="width: 105px;" type="number"></td>
+
+                </tr>
+                <tr>
+                    <th>transport</th>
+                    <td><input value="0" oninput="mot2()" id="mot" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="tut2()" id="tut" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="wet2()" id="wet" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="tht2()" id="tht" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="frt2()" id="frt" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="sat2()" id="sat" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="sut2()" id="sut" style="width: 105px;" type="number"></td>
+
+                </tr>
+
+                <tr>
+                    <th>other</th>
+                    <td><input value="0" oninput="moo2()" id="moo" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="tuo2()" id="tuo" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="weo2()" id="weo" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="tho2()" id="tho" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="fro2()" id="fro" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="sao2()" id="sao" style="width: 105px;" type="number"></td>
+                    <td><input value="0" oninput="suo2()" id="suo" style="width: 105px;" type="number"></td>
+
+                </tr>
+                <tr>
+                    <th style="color: rgb(45, 247, 45);">Saved</th>
+                    <td id="mosa1" style="color: rgb(45, 247, 45);">m</td>
+                    <td id="tusa1" style="color: rgb(45, 247, 45);">t</td>
+                    <td id="wesa1" style="color: rgb(45, 247, 45);">w</td>
+                    <td id="thsa1" style="color: rgb(45, 247, 45);">t</td>
+                    <td id="frsa1" style="color: rgb(45, 247, 45);">f</td>
+                    <td id="sasa1" style="color: rgb(45, 247, 45);">s</td>
+                    <td id="susa1" style="color: rgb(45, 247, 45);">s</td>
+                </tr>
+                <tr>
+                    <th style="color: red;">Spent</th>
+                    <td id="mosp1" style="color: red;">m</td>
+                    <td id="tusp1" style="color: red;">t</td>
+                    <td id="wesp1" style="color: red;">w</td>
+                    <td id="thsp1" style="color: red;">t</td>
+                    <td id="frsp1" style="color: red;">f</td>
+                    <td id="sasp1" style="color: red;">s</td>
+                    <td id="susp1" style="color: red;">s</td>
+                </tr>
+
+            </table>
+
+
+        </div>
+        <div class="saving">
+            <h4>This week</h4>
+            <h4 style="color: red;">Total Money Spent:</h4>
+            <p id="TotalMoSpw">0</p>
+            <h4 style="color: rgb(85, 170, 0);">Total Money Saved:</h4>
+            <p id="TotalMoSaw">0</p>
+        </div>
+        <div class="monthlySaving">
+            <h4>This month</h4>
+            <h4 style="color: red;">Total Money Spent:</h4>
+            <p id="TotalMoSpm"></p>
+            <h4 style="color: rgb(85, 170, 0);">Total Money Saved:</h4>
+            <p id="TotalMoSam"></p>
+        </div>
+        <div class="yearSaving">
+            <h4>Total since start</h4>
+            <h4 style="color: red;">Total Money Spent:</h4>
+            <p id="TotalMoSpy"></p>
+            <h4 style="color: rgb(85, 170, 0);">Total Money Saved:</h4>
+            <p id="TotalMoSay"></p>
+        </div>
+    </div>
+    <script src="savingplan.js">
+
+    </script>
+</body>
+
+</html>
