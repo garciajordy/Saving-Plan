@@ -4,14 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Saving Plan</title>
+    <link rel="icon shortcut" href="assets/dollar.webp">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-
     <div class="body">
+        <div class="currency">
+            <p>currency:</p>
+            <select oninput="currencyCheck()" name="currency" id="currency">
+                <optgroup label="Currency">
+                    <option value="0"></option>
+                    <option value="1">Лв</option>
+                    <option value="2">€</option>
+                    <option value="3">$</option>
+                </optgroup>
+
+            </select>
+        </div>
+
         <button onclick="clearAll()" id="clear">clear local storage</button>
         <div class="salaryCon">
             <h3 id="textSalary"></h3>
@@ -19,19 +32,29 @@
         <button ondblclick="nextmonth()" title="Double Click" id="nextmonth">next month</button>
         <button onclick="nextweek()" id="nextweek">next week</button>
         <button id="button" onclick="ShowSalaryDiv()">input salary</button>
+        <div id="inputScreen"></div>
         <div id="inpCon" class="inputCon">
-            <div class="x" onclick="ShowSalaryDiv()"><label>X</label></div>
-
+            <p class="x" id="x1" onclick="ShowSalaryDiv()">X</p>
+            <h2 style="text-align: center;">Salary & Bills</h2>
             <label for="salary">Salary:</label><br>
             <input id="inpsal" value="0" type="text"><br>
             <label for="extra">Bills:</label><br>
-            <input id="inpbill" value="0" type="text">
-            <br><br>
-            <center>
-                <button onclick="ConfirmSalary()">confirm</button>
-            </center>
+            <input style="margin-bottom: 40px;" id="inpbill" value="0" type="text">
+
+            <p id="b1" onclick="ConfirmSalary()">Confirm</p>
+
+            <h2 style="text-align: center;">Extra Saving or Spending</h2>
+            <label for="extraSaving">Extra saving money:</label><br>
+            <input id="extraSaving" value="0" type="text">
+            <label for="extraSpending">Money you used from savings:</label><br>
+            <input style="margin-bottom: 40px;" id="extraSpending" value="0" type="text">
+
+
+            <p id="b2" onclick="ConfirmSalary()">Confirm</p>
+
 
         </div>
+
         <div class="dateCon">
             <center>
                 <h1 id="datetoday"></h1>
@@ -177,7 +200,7 @@
             <p id="TotalMoSay"></p>
         </div>
     </div>
-    <script src="savingplan.js">
+    <script src="main.js">
 
     </script>
 </body>
