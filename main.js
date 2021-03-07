@@ -2,6 +2,8 @@ let ls = localStorage
 let datetoday = document.getElementById("datetoday")
 let weektoday = document.getElementById("weektoday")
 let textsalary = document.getElementById("textSalary")
+let textbills = document.getElementById("textBills")
+let textamount = document.getElementById("textAmount")
 let monday = document.getElementById("monday")
 let tuesday = document.getElementById("tuesday")
 let wednesday = document.getElementById("wednesday")
@@ -347,7 +349,9 @@ if (ls.getItem("bbills")) {
 }
 innerhtml()
 function innerhtml() {
-    textsalary.innerHTML = "Salary: " + ssalary.toFixed(2) + cur + " &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbspBills: " + bbills.toFixed(2) + cur + "&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp  Amount to spend: " + monthly.toFixed(2) + cur
+    textsalary.innerHTML = "Salary: " + ssalary.toFixed(2) + cur
+    textsalary.innerHTML = "Bills: " + bbills.toFixed(2) + cur
+    textsalary.innerHTML = "Amount to spend: " + monthly.toFixed(2) + cur
     mosp.innerHTML = parseFloat(motosp).toFixed(2) + cur
     mosa.innerHTML = parseFloat(motosa).toFixed(2) + cur
     tusp.innerHTML = parseFloat(tutosp).toFixed(2) + cur
