@@ -350,8 +350,8 @@ if (ls.getItem("bbills")) {
 innerhtml()
 function innerhtml() {
     textsalary.innerHTML = "Salary: " + ssalary.toFixed(2) + cur
-    textsalary.innerHTML = "Bills: " + bbills.toFixed(2) + cur
-    textsalary.innerHTML = "Amount to spend: " + monthly.toFixed(2) + cur
+    textbills.innerHTML = "Bills: " + bbills.toFixed(2) + cur
+    textamount.innerHTML = "Amount to spend: " + monthly.toFixed(2) + cur
     mosp.innerHTML = parseFloat(motosp).toFixed(2) + cur
     mosa.innerHTML = parseFloat(motosa).toFixed(2) + cur
     tusp.innerHTML = parseFloat(tutosp).toFixed(2) + cur
@@ -991,8 +991,11 @@ function ConfirmSalary() {
     ls.setItem(key, daily)
     let key1 = "monthly"
     ls.setItem(key1, monthly)
-    textsalary.innerHTML = "Salary: " + ssalary.toFixed(2) + cur + " &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbspBills: " + bbills.toFixed(2) + cur + "&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp  Amount to spend: " + monthly.toFixed(2) + cur
+    textsalary.innerHTML = "Salary: " + ssalary.toFixed(2) + cur
+    textbills.innerHTML = "Bills: " + bbills.toFixed(2) + cur
+    textamount.innerHTML = "Amount to spend: " + monthly.toFixed(2) + cur
 }
+
 
 function ShowSalaryDiv() {
 
@@ -1440,8 +1443,9 @@ function nextmonth() {
     susp.innerHTML = 0
     ssalary = 0
     bbills = 0
-    textsalary.innerHTML = "Salary: " + ssalary + cur + " &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbspBills: " + bbills + cur + "&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp  Amount to spend: " + monthly + cur
-
+    textsalary.innerHTML = "Salary: " + ssalary.toFixed(2) + cur
+    textbills.innerHTML = "Bills: " + bbills.toFixed(2) + cur
+    textamount.innerHTML = "Amount to spend: " + monthly.toFixed(2) + cur
 
 }
 storageAvailable()
