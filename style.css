@@ -8,10 +8,10 @@ html {
   padding: 0;
   max-width: 100vw;
   max-height: 100vh;
+  background-color: rgb(127, 197, 255);
 }
 
 .body {
-  background-color: rgb(127, 197, 255);
   display: grid;
   grid-template-columns: 0.8fr 4fr 1fr;
   grid-template-areas: "leftt middlle rightt";
